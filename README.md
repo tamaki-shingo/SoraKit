@@ -1,5 +1,6 @@
 # SoraKit
-<<<<<<< HEAD
+
+Sora (ShangriLa Anime API Server) Client
 
 [![CI Status](http://img.shields.io/travis/Shingo Tamaki/SoraKit.svg?style=flat)](https://travis-ci.org/Shingo Tamaki/SoraKit)
 [![Version](https://img.shields.io/cocoapods/v/SoraKit.svg?style=flat)](http://cocoapods.org/pods/SoraKit)
@@ -28,6 +29,3 @@ Shingo Tamaki, tamaki.shingo@gmail.com
 ## License
 
 SoraKit is available under the MIT license. See the LICENSE file for more info.
-=======
-Sora (ShangriLa Anime API Server) Client
->>>>>>> origin/master
