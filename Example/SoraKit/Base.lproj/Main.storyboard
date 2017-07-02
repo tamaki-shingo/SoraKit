@@ -45,7 +45,7 @@
         <!--SoraKit Features-->
         <scene sceneID="k8c-YC-Wai">
             <objects>
-                <tableViewController id="hFS-2l-FBp" customClass="SoraFeaturesViewControllerTableViewController" customModule="SoraKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hFS-2l-FBp" customClass="SoraFeaturesTableViewController" customModule="SoraKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vuw-RF-cE2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,6 +66,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="SoraKit Features" id="ags-Mt-0Uh"/>
+                    <connections>
+                        <segue destination="qJu-Iv-PMQ" kind="show" identifier="cours" id="xJO-80-ldA"/>
+                        <segue destination="c7I-GL-YBn" kind="show" identifier="year" id="iKo-eD-MB6"/>
+                        <segue destination="5GV-Jn-f2I" kind="show" identifier="yearperiod" id="1Ib-cC-iRj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Jd-NP-DrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,7 +102,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2I4-pN-Hcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535" y="143"/>
+            <point key="canvasLocation" x="1766" y="148"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="iO1-ff-RQu">
@@ -125,7 +130,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OrS-Yg-Jdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="806"/>
+            <point key="canvasLocation" x="1766" y="994"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="BXY-1N-ucN">
@@ -140,7 +145,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4zi-BX-KKz" id="DlS-1r-5hO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -153,7 +158,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KU7-ff-2Tt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="1497"/>
+            <point key="canvasLocation" x="1766" y="2097"/>
         </scene>
     </scenes>
 </document>

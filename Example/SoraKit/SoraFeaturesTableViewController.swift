@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SoraFeaturesViewControllerTableViewController: UITableViewController {
+class SoraFeaturesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,11 +48,12 @@ class SoraFeaturesViewControllerTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
+            self.performSegue(withIdentifier: "cours", sender: self)
             break
         case 1:
             let alert = UIAlertController(title: "Please input year", message: "", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                
+                self.performSegue(withIdentifier: "cours", sender: self)
             })
             alert.addAction(action)
             alert.addTextField(configurationHandler: { textField in
@@ -64,16 +65,16 @@ class SoraFeaturesViewControllerTableViewController: UITableViewController {
             let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
                 let periodAlert = UIAlertController(title: "Select Period", message: "Please select period", preferredStyle: .actionSheet)
                 let winter = UIAlertAction(title: "Winter", style: .default, handler: { (action) in
-                    
+                    self.performSegue(withIdentifier: "cours", sender: self)
                 })
                 let spring = UIAlertAction(title: "Spring", style: .default, handler: { (action) in
-                    
+                    self.performSegue(withIdentifier: "cours", sender: self)
                 })
                 let summer = UIAlertAction(title: "Summer", style: .default, handler: { (action) in
-                    
+                    self.performSegue(withIdentifier: "cours", sender: self)
                 })
                 let autumm = UIAlertAction(title: "Autumm", style: .default, handler: { (action) in
-                    
+                    self.performSegue(withIdentifier: "cours", sender: self)
                 })
                 periodAlert.addAction(winter)
                 periodAlert.addAction(spring)
@@ -91,14 +92,11 @@ class SoraFeaturesViewControllerTableViewController: UITableViewController {
         }
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
 
 }
