@@ -2,7 +2,7 @@
 
 Sora (ShangriLa Anime API Server) Client
 
-[![CI Status](http://img.shields.io/travis/Shingo Tamaki/SoraKit.svg?style=flat)](https://travis-ci.org/Shingo Tamaki/SoraKit)
+<!-- [![CI Status](http://img.shields.io/travis/Shingo Tamaki/SoraKit.svg?style=flat)](https://travis-ci.org/Shingo Tamaki/SoraKit) -->
 [![Version](https://img.shields.io/cocoapods/v/SoraKit.svg?style=flat)](http://cocoapods.org/pods/SoraKit)
 [![License](https://img.shields.io/cocoapods/l/SoraKit.svg?style=flat)](http://cocoapods.org/pods/SoraKit)
 [![Platform](https://img.shields.io/cocoapods/p/SoraKit.svg?style=flat)](http://cocoapods.org/pods/SoraKit)
