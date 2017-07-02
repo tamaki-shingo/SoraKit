@@ -1,0 +1,25 @@
+PODS:
+  - APIKit (3.1.1):
+    - Result (~> 3.0)
+  - ObjectMapper (2.2.7)
+  - Result (3.2.3)
+  - SoraKit (0.1.0):
+    - APIKit (~> 3.0)
+    - ObjectMapper (~> 2.2)
+
+DEPENDENCIES:
+  - SoraKit (from `../`)
+
+EXTERNAL SOURCES:
+  SoraKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  APIKit: 7460983f490d3bde6aaaaa4164d18c9865a6f91d
+  ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
+  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
+  SoraKit: c27e46088d41f96266661a63707fc0d760cc4694
+
+PODFILE CHECKSUM: 68e9544e5c061878b139ecca663886118799a9f6
+
+COCOAPODS: 1.2.1
