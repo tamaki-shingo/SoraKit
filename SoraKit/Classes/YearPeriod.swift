@@ -9,28 +9,28 @@
 import Foundation
 import ObjectMapper
 
-struct YearPeriod: Mappable {
-    var id: Int?
-    var title: String?
-    var title_short1: String?
-    var title_short2: String?
-    var title_short3: String?
-    var public_url: String?
-    var twitter_account: String?
-    var twitter_hash_tag: String?
-    var cours_id: Int?
-    var created_at: String?
-    var updated_at: String?
-    var sex: Int?
-    var sequel: Int?
-    var city_code: Int?
-    var city_name: String?
+public struct YearPeriod: Mappable {
+    public var id: Int?
+    public var title: String?
+    public var title_short1: String?
+    public var title_short2: String?
+    public var title_short3: String?
+    public var public_url: String?
+    public var twitter_account: String?
+    public var twitter_hash_tag: String?
+    public var cours_id: Int?
+    public var created_at: String?
+    public var updated_at: String?
+    public var sex: Int?
+    public var sequel: Int?
+    public var city_code: Int?
+    public var city_name: String?
 
-    init?(map: Map) {
+    public init?(map: Map) {
         
     }
     
-    mutating func mapping(map: Map) {
+    public mutating func mapping(map: Map) {
         self.id               <- map["id"]
         self.title            <- map["title"]
         self.title_short1     <- map["title_short1"]

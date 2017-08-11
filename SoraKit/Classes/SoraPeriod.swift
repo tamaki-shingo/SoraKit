@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum SoraPeriod:Int {
+public enum SoraPeriod: Int {
     case unknown = 0
     case winter
     case sprint

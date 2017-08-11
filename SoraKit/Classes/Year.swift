@@ -9,15 +9,15 @@
 import Foundation
 import ObjectMapper
 
-struct Year: Mappable {
-    var id: Int?
-    var title: String?
+public struct Year: Mappable {
+    public var id: Int?
+    public var title: String?
     
-    init?(map: Map) {
+    public init?(map: Map) {
         
     }
     
-    mutating func mapping(map: Map) {
+    public mutating func mapping(map: Map) {
         self.id    <- map["id"]
         self.title <- map["title"]
     }

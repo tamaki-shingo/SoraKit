@@ -9,17 +9,17 @@
 import Foundation
 import ObjectMapper
 
-struct Cour: Mappable {
-    var id: Int?
-    var year: Int?
-    var cours: Int?
+public struct Cour: Mappable {
+    public var id: Int?
+    public var year: Int?
+    public var cours: Int?
     
     
-    init?(map: Map) {
+    public init?(map: Map) {
         
     }
     
-    mutating func mapping(map: Map) {
+    public mutating func mapping(map: Map) {
         self.id    <- map["id"]
         self.year  <- map["year"]
         self.cours <- map["cours"]
