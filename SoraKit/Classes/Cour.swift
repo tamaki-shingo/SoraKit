@@ -14,10 +14,7 @@ public struct Cour: Mappable {
     public var year: Int?
     public var cours: Int?
     
-    
-    public init?(map: Map) {
-        
-    }
+    public init?(map: Map) {}
     
     public mutating func mapping(map: Map) {
         self.id    <- map["id"]

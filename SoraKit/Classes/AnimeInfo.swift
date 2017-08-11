@@ -26,9 +26,7 @@ public struct AnimeInfo: Mappable {
     public var city_code: Int?
     public var city_name: String?
 
-    public init?(map: Map) {
-        
-    }
+    public init?(map: Map) {}
     
     public mutating func mapping(map: Map) {
         self.id               <- map["id"]

@@ -31,5 +31,4 @@ struct AnimeInfoRequest: Request {
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> [AnimeInfo] {
         return Mapper<AnimeInfo>().mapArray(JSONObject: object)!
     }
-    
 }
