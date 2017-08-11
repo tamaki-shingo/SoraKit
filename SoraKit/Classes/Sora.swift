@@ -22,9 +22,9 @@ public class Sora {
             }
         }
     }
-    public class func year(_ year: String, success: @escaping ([Year]) -> Void, failure: @escaping (Error) -> Void) {
+    public class func year(_ year: Int, success: @escaping ([Year]) -> Void, failure: @escaping (Error) -> Void) {
         var request = YearRequest()
-        request.year = year
+        request.year = String(year)
         Session.send(request) { (result) in
             switch result {
             case .success(let years):
@@ -35,9 +35,9 @@ public class Sora {
             }
         }
     }
-    public class func year(_ year: String, period: SoraPeriod, success: @escaping ([YearPeriod]) -> Void, failure: @escaping (Error) -> Void) {
+    public class func year(_ year: Int, period: SoraPeriod, success: @escaping ([YearPeriod]) -> Void, failure: @escaping (Error) -> Void) {
         var request = YearPeriodRequest()
-        request.year = year
+        request.year = String(year)
         request.period = period
         Session.send(request) { (result) in
             switch result {

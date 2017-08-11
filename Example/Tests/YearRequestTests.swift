@@ -21,7 +21,7 @@ class YearPeriodRequestTests: XCTestCase {
     
     func testExample() {
         let expectation = self.expectation(description: "Cours Request")
-        Sora.year("2015", period: .winter, success: { yearDetails in
+        Sora.year(2015, period: .winter, success: { yearDetails in
             print(yearDetails)
             XCTAssertNotNil(yearDetails)
             expectation.fulfill()
