@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-public struct Year: Mappable {
+public struct AnimeTitle: Mappable {
     public var id: Int?
     public var title: String?
     

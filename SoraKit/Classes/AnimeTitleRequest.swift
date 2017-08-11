@@ -10,10 +10,10 @@ import Foundation
 import APIKit
 import ObjectMapper
 
-struct YearRequest: Request {
+struct AnimeTitleRequest: Request {
     var year: String = ""
     
-    typealias Response = [Year]
+    typealias Response = [AnimeTitle]
     
     var baseURL: URL {
         return URL(string: "http://api.moemoe.tokyo/anime/v1")!
@@ -27,8 +27,8 @@ struct YearRequest: Request {
         return "/master/\(year)"
     }
     
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> [Year] {
-        return Mapper<Year>().mapArray(JSONObject: object)!
+    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> [AnimeTitle] {
+        return Mapper<AnimeTitle>().mapArray(JSONObject: object)!
     }
     
 }

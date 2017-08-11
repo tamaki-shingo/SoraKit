@@ -10,11 +10,11 @@ import Foundation
 import APIKit
 import ObjectMapper
 
-struct YearPeriodRequest: Request {
+struct AnimeInfoRequest: Request {
     var year: String = ""
-    var period: SoraPeriod = .unknown
+    var season: SoraSeason = .unknown
     
-    typealias Response = [YearPeriod]
+    typealias Response = [AnimeInfo]
     
     var baseURL: URL {
         return URL(string: "http://api.moemoe.tokyo/anime/v1")!
@@ -25,11 +25,11 @@ struct YearPeriodRequest: Request {
     }
     
     var path: String {
-        return "/master/\(year)/\(String(period.rawValue))"
+        return "/master/\(year)/\(String(season.rawValue))"
     }
     
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> [YearPeriod] {
-        return Mapper<YearPeriod>().mapArray(JSONObject: object)!
+    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> [AnimeInfo] {
+        return Mapper<AnimeInfo>().mapArray(JSONObject: object)!
     }
     
 }

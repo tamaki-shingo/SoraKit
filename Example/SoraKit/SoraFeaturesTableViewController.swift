@@ -7,19 +7,13 @@
 //
 
 import UIKit
+import SoraKit
 
 class SoraFeaturesTableViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    // MARK: - Table view data source
-
+    private var targetYear: Int?
+    private var targetSeason: SoraSeason?
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -35,9 +29,9 @@ class SoraFeaturesTableViewController: UITableViewController {
         case 0:
             cell.textLabel?.text = "Cours"
         case 1:
-            cell.textLabel?.text = "Year Info"
+            cell.textLabel?.text = "Anime Titles of Year"
         case 2:
-            cell.textLabel?.text = "Year/Period Info"
+            cell.textLabel?.text = "Anime info of Year/Season"
         default:
             return UITableViewCell()
         }
@@ -51,9 +45,12 @@ class SoraFeaturesTableViewController: UITableViewController {
             self.performSegue(withIdentifier: "cours", sender: self)
             break
         case 1:
-            let alert = UIAlertController(title: "Please input year", message: "", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                self.performSegue(withIdentifier: "cours", sender: self)
+            let alert = UIAlertController(title: "Please input Year", message: "", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: { [weak alert] action in
+                if let year = alert?.textFields?.first?.text {
+                    self.targetYear = Int(year)
+                }
+                self.performSegue(withIdentifier: "titles", sender: self)
             })
             alert.addAction(action)
             alert.addTextField(configurationHandler: { textField in
@@ -61,26 +58,34 @@ class SoraFeaturesTableViewController: UITableViewController {
             })
             self.present(alert, animated: true, completion: nil)
         case 2:
-            let alert = UIAlertController(title: "Please input year", message: "", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Please input Year", message: "", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                let periodAlert = UIAlertController(title: "Select Period", message: "Please select period", preferredStyle: .actionSheet)
+                if let year = alert.textFields?.first?.text {
+                    self.targetYear = Int(year)
+                }
+
+                let seasonSelectionAlert = UIAlertController(title: "Select Season", message: "Please select season", preferredStyle: .actionSheet)
                 let winter = UIAlertAction(title: "Winter", style: .default, handler: { (action) in
-                    self.performSegue(withIdentifier: "cours", sender: self)
+                    self.targetSeason = .winter
+                    self.performSegue(withIdentifier: "info", sender: self)
                 })
                 let spring = UIAlertAction(title: "Spring", style: .default, handler: { (action) in
-                    self.performSegue(withIdentifier: "cours", sender: self)
+                    self.targetSeason = .sprint
+                    self.performSegue(withIdentifier: "info", sender: self)
                 })
                 let summer = UIAlertAction(title: "Summer", style: .default, handler: { (action) in
-                    self.performSegue(withIdentifier: "cours", sender: self)
+                    self.targetSeason = .summer
+                    self.performSegue(withIdentifier: "info", sender: self)
                 })
-                let autumm = UIAlertAction(title: "Autumm", style: .default, handler: { (action) in
-                    self.performSegue(withIdentifier: "cours", sender: self)
+                let autumm = UIAlertAction(title: "Autumn", style: .default, handler: { (action) in
+                    self.targetSeason = .autumn
+                    self.performSegue(withIdentifier: "info", sender: self)
                 })
-                periodAlert.addAction(winter)
-                periodAlert.addAction(spring)
-                periodAlert.addAction(summer)
-                periodAlert.addAction(autumm)
-                self.present(periodAlert, animated: true, completion: nil)
+                seasonSelectionAlert.addAction(winter)
+                seasonSelectionAlert.addAction(spring)
+                seasonSelectionAlert.addAction(summer)
+                seasonSelectionAlert.addAction(autumm)
+                self.present(seasonSelectionAlert, animated: true, completion: nil)
             })
             alert.addAction(action)
             alert.addTextField(configurationHandler: { textField in
@@ -96,7 +101,15 @@ class SoraFeaturesTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        switch segue.destination {
+        case let titlesTableVC as AnimeTitleTableViewController:
+            titlesTableVC.targetYear = targetYear
+        case let infoTableVC as AnimeInfoTableViewController:
+            infoTableVC.targetYear = targetYear
+            infoTableVC.targetSeason = targetSeason
+        default:
+            break
+        }
     }
 
 }

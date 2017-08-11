@@ -22,8 +22,8 @@ public class Sora {
             }
         }
     }
-    public class func year(_ year: Int, success: @escaping ([Year]) -> Void, failure: @escaping (Error) -> Void) {
-        var request = YearRequest()
+    public class func animeTitles(OfYear year: Int, success: @escaping ([AnimeTitle]) -> Void, failure: @escaping (Error) -> Void) {
+        var request = AnimeTitleRequest()
         request.year = String(year)
         Session.send(request) { (result) in
             switch result {
@@ -35,10 +35,10 @@ public class Sora {
             }
         }
     }
-    public class func year(_ year: Int, period: SoraPeriod, success: @escaping ([YearPeriod]) -> Void, failure: @escaping (Error) -> Void) {
-        var request = YearPeriodRequest()
+    public class func animeInfo(OfYear year: Int, season: SoraSeason, success: @escaping ([AnimeInfo]) -> Void, failure: @escaping (Error) -> Void) {
+        var request = AnimeInfoRequest()
         request.year = String(year)
-        request.period = period
+        request.season = season
         Session.send(request) { (result) in
             switch result {
             case .success(let yearDetails):

@@ -9,7 +9,7 @@
 import XCTest
 @testable import SoraKit
 
-class YearRequestTests: XCTestCase {
+class AnimeInfoRequestTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
@@ -21,9 +21,9 @@ class YearRequestTests: XCTestCase {
     
     func testExample() {
         let expectation = self.expectation(description: "Cours Request")
-        Sora.year(2015, success: { years in
-            print(years)
-            XCTAssertNotNil(years)
+        Sora.animeInfo(OfYear: 2015, season: .winter, success: { yearDetails in
+            print(yearDetails)
+            XCTAssertNotNil(yearDetails)
             expectation.fulfill()
         }) { error in
             XCTFail(error.localizedDescription)
@@ -35,5 +35,5 @@ class YearRequestTests: XCTestCase {
                 XCTFail((error.localizedDescription))
             }
         }
-    }
+    }    
 }

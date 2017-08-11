@@ -13,9 +13,12 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		7232DB1B8D14987D555D22D0 /* Pods_SoraKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB745E51F19601F520605A54 /* Pods_SoraKit_Example.framework */; };
 		93C5C10A1F093E2300CC0924 /* CoursRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C1091F093E2300CC0924 /* CoursRequestTests.swift */; };
-		93C5C10E1F09403500CC0924 /* YearRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C10D1F09403500CC0924 /* YearRequestTests.swift */; };
-		93C5C1101F09408F00CC0924 /* YearPeriodRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C10F1F09408F00CC0924 /* YearPeriodRequestTests.swift */; };
+		93C5C10E1F09403500CC0924 /* AnimeInfoRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C10D1F09403500CC0924 /* AnimeInfoRequestTests.swift */; };
+		93C5C1101F09408F00CC0924 /* AnimeTitleRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C10F1F09408F00CC0924 /* AnimeTitleRequestTests.swift */; };
 		93C5C1121F09472100CC0924 /* SoraFeaturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C1111F09472100CC0924 /* SoraFeaturesTableViewController.swift */; };
+		93C5C1141F094F6300CC0924 /* CourTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C1131F094F6300CC0924 /* CourTableViewController.swift */; };
+		93C5C1161F094F6B00CC0924 /* AnimeTitleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C1151F094F6B00CC0924 /* AnimeTitleTableViewController.swift */; };
+		93C5C1181F094F7600CC0924 /* AnimeInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C1171F094F7600CC0924 /* AnimeInfoTableViewController.swift */; };
 		D250298B72C0A5ABB325C8B8 /* Pods_SoraKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CEF95B9CF902EE58870AFC3 /* Pods_SoraKit_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,9 +45,12 @@
 		607FACE51AFB9204008FA782 /* SoraKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoraKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C5C1091F093E2300CC0924 /* CoursRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursRequestTests.swift; sourceTree = "<group>"; };
-		93C5C10D1F09403500CC0924 /* YearRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearRequestTests.swift; sourceTree = "<group>"; };
-		93C5C10F1F09408F00CC0924 /* YearPeriodRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearPeriodRequestTests.swift; sourceTree = "<group>"; };
+		93C5C10D1F09403500CC0924 /* AnimeInfoRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeInfoRequestTests.swift; sourceTree = "<group>"; };
+		93C5C10F1F09408F00CC0924 /* AnimeTitleRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeTitleRequestTests.swift; sourceTree = "<group>"; };
 		93C5C1111F09472100CC0924 /* SoraFeaturesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoraFeaturesTableViewController.swift; sourceTree = "<group>"; };
+		93C5C1131F094F6300CC0924 /* CourTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourTableViewController.swift; sourceTree = "<group>"; };
+		93C5C1151F094F6B00CC0924 /* AnimeTitleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeTitleTableViewController.swift; sourceTree = "<group>"; };
+		93C5C1171F094F7600CC0924 /* AnimeInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeInfoTableViewController.swift; sourceTree = "<group>"; };
 		9CEF95B9CF902EE58870AFC3 /* Pods_SoraKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoraKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95DF8C30CE1499CF7C8A9F5 /* Pods-SoraKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoraKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoraKit_Example/Pods-SoraKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DB745E51F19601F520605A54 /* Pods_SoraKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoraKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +116,9 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				93C5C1111F09472100CC0924 /* SoraFeaturesTableViewController.swift */,
+				93C5C1131F094F6300CC0924 /* CourTableViewController.swift */,
+				93C5C1151F094F6B00CC0924 /* AnimeTitleTableViewController.swift */,
+				93C5C1171F094F7600CC0924 /* AnimeInfoTableViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -131,8 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				93C5C1091F093E2300CC0924 /* CoursRequestTests.swift */,
-				93C5C10D1F09403500CC0924 /* YearRequestTests.swift */,
-				93C5C10F1F09408F00CC0924 /* YearPeriodRequestTests.swift */,
+				93C5C10D1F09403500CC0924 /* AnimeInfoRequestTests.swift */,
+				93C5C10F1F09408F00CC0924 /* AnimeTitleRequestTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -367,8 +376,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C5C1161F094F6B00CC0924 /* AnimeTitleTableViewController.swift in Sources */,
 				93C5C1121F09472100CC0924 /* SoraFeaturesTableViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				93C5C1181F094F7600CC0924 /* AnimeInfoTableViewController.swift in Sources */,
+				93C5C1141F094F6300CC0924 /* CourTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,8 +389,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C5C10A1F093E2300CC0924 /* CoursRequestTests.swift in Sources */,
-				93C5C10E1F09403500CC0924 /* YearRequestTests.swift in Sources */,
-				93C5C1101F09408F00CC0924 /* YearPeriodRequestTests.swift in Sources */,
+				93C5C10E1F09403500CC0924 /* AnimeInfoRequestTests.swift in Sources */,
+				93C5C1101F09408F00CC0924 /* AnimeTitleRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
