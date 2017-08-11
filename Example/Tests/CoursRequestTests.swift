@@ -10,7 +10,6 @@ import XCTest
 @testable import SoraKit
 
 class CoursRequestTests: XCTestCase {
-    let sora = Sora()
 
     override func setUp() {
         super.setUp()
@@ -22,7 +21,7 @@ class CoursRequestTests: XCTestCase {
 
     func testCoursRequest() {
         let expectation = self.expectation(description: "Cours Request")
-        sora.cours(success: { cours in
+        Sora.cours(success: { cours in
             print(cours)
             XCTAssertNotNil(cours)
             expectation.fulfill()

@@ -10,7 +10,6 @@ import XCTest
 @testable import SoraKit
 
 class YearRequestTests: XCTestCase {
-    let sora = Sora()
 
     override func setUp() {
         super.setUp()
@@ -22,7 +21,7 @@ class YearRequestTests: XCTestCase {
     
     func testExample() {
         let expectation = self.expectation(description: "Cours Request")
-        sora.year("2015", success: { years in
+        Sora.year("2015", success: { years in
             print(years)
             XCTAssertNotNil(years)
             expectation.fulfill()
