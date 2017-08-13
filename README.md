@@ -97,7 +97,7 @@ year/cour api return AnimeInfo struct as following.
 
 ## Author
 
-Shingo Tamaki, tamaki.shingo@gmail.com
+Shingo Tamaki
 
 ## License
 
