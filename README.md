@@ -11,6 +11,29 @@ Client Library of Sora (ShangriLa Anime API Server) for iOS
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## Requirements
+
+SoraKit need to add ATS settings to info.plist.
+
+
+### Example
+
+```
+<key>NSAppTransportSecurity</key>
+<dict>
+  <key>NSAllowsArbitraryLoads</key>
+  <false/>
+  <key>NSExceptionDomains</key>
+  <dict>
+    <key>api.moemoe.tokyo</key>
+    <dict>
+      <key>NSExceptionAllowsInsecureHTTPLoads</key>
+      <true/>
+    </dict>
+  </dict>
+</dict>
+```
+
 ## Installation
 
 SoraKit is available through [CocoaPods](http://cocoapods.org). To install
