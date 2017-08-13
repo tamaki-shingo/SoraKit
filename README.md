@@ -67,10 +67,9 @@ Return the anime information of any season of any year.
 
 ```
 Sora.animeInfo(OfYear: year, season: season, success: { (animeInfoList) in
-    self.dataSource = animeInfoList
-    self.tableView.reloadData()
+  // Success
 }, failure: { (error) in
-    print(error)
+  // Error
 })
 ```
 
