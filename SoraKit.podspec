@@ -28,7 +28,8 @@ Client Library of Sora (ShangriLa Anime API Server) for iOS
   s.source           = { :git => 'https://github.com/tamaki-shingo/SoraKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.platform     = :ios, "9.0"
+  # s.ios.deployment_target = '8.0'
 
   s.source_files = 'SoraKit/Classes/**/*'
 
