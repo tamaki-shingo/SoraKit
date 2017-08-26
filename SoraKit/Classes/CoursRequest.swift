@@ -1,5 +1,5 @@
 //
-//  Cours.swift
+//  CoursRequest.swift
 //  Pods
 //
 //  Created by tamaki on 7/1/17.

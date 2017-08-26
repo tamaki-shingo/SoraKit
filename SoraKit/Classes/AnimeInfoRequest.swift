@@ -1,5 +1,5 @@
 //
-//  YearPeriodRequest.swift
+//  AnimeInfoRequest.swift
 //  Pods
 //
 //  Created by tamaki on 7/2/17.
